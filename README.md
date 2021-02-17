@@ -17,9 +17,9 @@ This short tutorial describes a way to make a virtual machine configured for STM
 <a name="prerequisites"></a>
 # Prerequisites
 
-* hardware: a 64-bit computer with enough memory so that the VM can be granted 16 GB, with a few tens of GB available on the disk, and one free USB A port
-* hardware (bis): a [Nucle-L476RG board](https://my.st.com/content/my_st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-l476rg.html) with an USB A / micro USB B cable - any similar NUCLEO board can be used
-* developer: 
+* Hardware: a 64-bit computer with enough memory so that the VM can be granted 16 GB, with a few tens of GB available on the disk, and one free USB A port
+* Hardware (bis): a [Nucle-L476RG board](https://my.st.com/content/my_st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-l476rg.html) with an USB A / micro USB B cable - any similar NUCLEO board can be used
+* Developer: 
   * basic knowledge of Linux (knowing the most common commands...)
   * basic knowledge of VirtualBox (knowing how to create a virtual machine...)
 
@@ -44,14 +44,14 @@ Wait for Linux desktop to be displayed.
 If your keyboard layout is not QWERTY, click on the main-menu icon (the small icon displaying Linux Mint logo, in the lower left-hand corner), select **Control Center**, click on **Keyboard** icon, select **Layouts** tab, add the layout for your keyboard, and remove the existing **English (US)** layout. Close the Control Center windows.
 
 Double click on the **Install Linux Mint** icon. Following information or selections can be provided, when required for:
-* language: English
-* keyboard layout: the one for your keyboard
-* install multimedia codecs
-* erase disk and install Linux Mint
-* name: Developer
-* computer's name: ESP32LM
-* username: developer
-* password: choose one
+* Language: English
+* Keyboard layout: the one for your keyboard
+* Install multimedia codecs
+* Erase disk and install Linux Mint
+* Name: Developer
+* Computer's name: STM32LM
+* Username: developer
+* Password: choose one
 
 At the end of the installation, restart. When you get the message **Please remove the installation medium, then press ENTER:**, click on Enter key.
 
@@ -77,21 +77,35 @@ You can resize the VirtualBox window: the Linux Mint desktop will resize accordi
 <a name="referenceDocuments"></a>
 ## Reference documents
 
+* [STM32CubeIDE documentation](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-ides/stm32cubeide.html#documentation)
+* [STM32CubeL4 documentation](https://www.st.com/content/st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubel4.html#documentation)
 * [STM32CubeIDE basics MOOC](https://www.st.com/content/st_com/en/support/learning/stm32-education/stm32-moocs/STM32CubeIDE_basics_MOOC.html)
 
 <a name="stm32cubeideInstallation"></a>
 ## STM32CubeIDE installation
 
-* [download STM32CubeIDE Debian Linux Installer 1.5.1](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-ides/stm32cubeide.html). You will have to create an account
-* unzip the file
-* install the application according to the [Installation Guide](https://my.st.com/resource/en/user_manual/dm00603964-stm32cubeide-installation-guide-stmicroelectronics.pdf)
-  * install Segger J-Link udev rules
+* [Download STM32CubeIDE Debian Linux Installer 1.5.1](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-ides/stm32cubeide.html). You will have to create an account
+* Unzip the file
+* Install the application according to the [Installation Guide](https://my.st.com/resource/en/user_manual/dm00603964-stm32cubeide-installation-guide-stmicroelectronics.pdf)
+  * Install Segger J-Link udev rules
 
 <a name="sampleApplication"></a>
 ## Sample application
 
-* start STM32CubeIDE (from main menu and then **All applications > Programming**
-* keep the default workspace and click on the **Launch** button
-* the welcome window is displayed:
+* Start STM32CubeIDE (from main menu and then **All applications > Programming**
+* Keep the default workspace and click on the **Launch** button
+* The welcome window is displayed:
 
 <a href="images/welcomeWindow.png">![welcome window](images/welcomeWindow-medium.png)</a>
+
+* From **Help** menu, select **Manage Embedded Software Packages**:
+
+<a href="images/manageEmbeddedSoftwarePackages.png">![welcome window](images/manageEmbeddedSoftwarePackages-medium.png)</a>
+
+* In the **STM32Cube MCU Packages** tab, select the latest version of STM32L4 package (version 1.16.0 at time of writing):
+
+<a href="images/embeddedSofwarePackagesManager.png">![welcome window](images/embeddedSofwarePackagesManager-medium.png)</a>
+
+* Click on **Install Now** button and let the installation go
+* Close the window
+* 
