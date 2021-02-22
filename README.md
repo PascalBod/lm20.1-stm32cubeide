@@ -121,7 +121,7 @@ No need to perform the last step, the manual installation, described in the Inst
 
 The package is installed in `/home/developer/STM32Cube/Repository/STM32Cube_FW_L4_V1.16.0`.
 
-<a name="#importASampleApplication"></a>
+<a name="importASampleApplication"></a>
 ## Import a sample application
 
 * Click on the *Minimize* icon of the *Information Center* window, in the upper right-hand corner:
@@ -146,7 +146,7 @@ The **Build Analyzer** window provides memory usage information:
 
 <a href="images/buildAnalyzer.png"><img src="images/buildAnalyzer-medium.png"></a>
 
-<a name="#flashAndRunTheApplication"></a>
+<a name="flashAndRunTheApplication"></a>
 ## Flash and run the application
 
 Connect the NUCLEO board to the host PC. Check that the virtual machine can see it, with **Devices > USB** from VirtualBox menu. A new USB device should be visible: *STMicroelectronics STM32 STLink [0100]*. Tick the associated checkbox.
