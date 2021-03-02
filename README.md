@@ -30,6 +30,8 @@ This short tutorial describes a way to make a virtual machine configured for STM
 
 Check [this guide](https://github.com/PascalBod/lm20.1-vm).
 
+Be sure to provide the guest machine with enough resources. STM32CubeIDE is quite power-hungry. The guide recommends 16 GB for RAM and two CPUs. On my i7-8559U host machine, a one-CPU VM won't display correctly the Device Configuration Tool (aka CubeMX) window: two CPUs are required.
+
 <a name="vmConfiguration"></a>
 # VM configuration
 
@@ -44,12 +46,12 @@ Check [this guide](https://github.com/PascalBod/lm20.1-vm).
 ## STM32CubeIDE installation
 
 According to the [Installation Guide](https://my.st.com/resource/en/user_manual/dm00603964-stm32cubeide-installation-guide-stmicroelectronics.pdf):
-* [Download STM32CubeIDE Debian Linux Installer 1.5.1](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-ides/stm32cubeide.html). You will have to create an account
+* [Download STM32CubeIDE Debian Linux Installer](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-ides/stm32cubeide.html), version 1.6.0 at time of writing. You will have to create an account
 * Unzip the file
 * Run resulting script:
 
 ```shell
-$ sudo sh ./st-stm32cubeide_1.5.1_9029_20201210_1234_amd64.deb_bundle.sh
+$ sudo sh ./st-stm32cubeide_1.6.0_9614_20210223_1703_amd64.deb_bundle.sh
 ```
 
 * Accept the license, install Segger J-Link udev rules, accept additional licenses
