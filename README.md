@@ -5,11 +5,12 @@
 * [Creation of the VM](#creationOfTheVm)
 * [VM configuration](#vmConfiguration)
   * [Reference documents](#referenceDocuments)
-  * [STM32CubeIDE installation](stm32cubeideInstallation)
+  * [STM32CubeIDE installation](#stm32cubeideInstallation)
 * [Sample application](#sampleApplication)
   * [Install sample applications](#installSampleAppications)
   * [Import a sample application](#importASampleApplication)
   * [Flash and run the application](#flashAndRunTheApplication)
+* [Update](#update)
 
 <a name="overview"></a>
 # Overview
@@ -138,3 +139,19 @@ Click on the **Upgrade** button. At the end of the upgrade, close the window.
 Request again to run the above run configuration. The Console window displays a rebuild, the board programming, and ends with a message saying that the debugger connection is lost. That's normal, as we didn't start a debugging session.
 
 Push on the blue button. The green LED should light up when you release the button. Push again, it should cut out when the button is released.
+
+<a name="update"></a>
+# Update
+
+As STM32CubeIDE is installed with sudo, it can be updated only when started with sudo:
+* start STM32CubeIDE:
+
+```shell
+$ sudo /opt/st/stm32cubeide_<currentVersion>/stm32cubeide
+```
+
+* select **Help > Check for Updates**
+* if an STM32CubeIDE update is available, it is displayed in the *Available Updates* window, and ticked by default
+* click on the **Next >** button, accept the license and install the update
+* accept the installation of the unsigned software when asked for
+* edit the menu entry, to set the new version number
